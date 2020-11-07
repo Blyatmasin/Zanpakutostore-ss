@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>PAYMENT PAGE</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<style>
+		body {
+		background-image: url("img/nimaya oetsu wallpaper.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+		
+		.modal-content {
+			background-color: #8d6ac5;
+			margin: auto;
+			margin-top: 20em;
+			padding: 20px;
+			border: 0px solid;
+			border-radius: 25px;
+			width: 69%;
+			height: 14em;
+		}
+	</style>
+<div class="box" style="float:right; overflow:hidden;">
+	<img src="img/seller150.jpg">
+	<style>
+		.img {
+			background-repeat: no-repeat;
+			max-width: 100%;
+			max-height: 100%;
+			display:block;
+		}​
+		.box{
+			height:130px;
+			width: 130px;        
+		}
+	</style>
+</div>
+<div class="box" style="float:left; overflow:hidden;">
+	<img src="img/katana196x52.png">
+	<style>
+		.img {
+			background-repeat: no-repeat;
+			max-width: 50%;
+			max-height: 50%;
+			display:block;
+		}​
+		.box{
+			height:130px;
+			width: 130px;        
+		}
+	</style>
+</div>
+<div class="jumbotron jumbotron-fluid text-left" style="color:#FFFBC5; margin-bottom:0">
+	<div style="margin-top:15px;">
+		<nav aria-label="breadcrumb" style="float:left; overflow:hidden;">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item" aria-current="page"><a href="HOME PAGE.html">HOME</a></li>
+				<li class="breadcrumb-item" aria-current="page"><a href="PRODUCT PAGE.html">KATEN KYOKOTSU</a></li>
+				<li class="breadcrumb-item active" aria-current="page">CONTACT US</li>
+			</ol>
+		</nav>
+	</div>
+	<div class="container-fluid">
+		<style>
+		.jumbotron {
+			background-image: url("img/blackmarble.jpg");
+			background-size: cover;
+			height: 150px;
+			width: 100%;
+		}
+		</style>
+	</div>
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<a class="navbar-brand" href="HOME PAGE.html">HOME</a>
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="#gallery">GALLERY</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="CONTACT US.html">CONTACT US</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#profile">PROFILE</a>
+			</li>
+		</ul>
+	</div>
+	<form class="form-inline-1 my-2 my-lg-0">
+		<input class="form-control mr-sm-3" type="search" placeholder="Search here..." aria-label="Search">	
+	</form> 
+	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Go</button>
+</nav>
+</head>
+<body>
+<div class="container" style="margin-top:30px;">			
+	<div class="jumbotron_pay" id="payment" style="background-color:#e8e8e8; padding:12px; width:100%; height:38em; border-radius:1em;">
+		<div class="row" id="photonamepricequantity">
+			<div class="col-sm-3">
+				<img id="blades" src="img/katen kyokotsu blades.jpg" style="border:solid; border-width:2px; margin-left:12px">
+					<style>
+					#blades {
+						display: block;
+						max-width: 11em;
+						max-height: 11em;
+						border-radius: 1em;
+						margin-top: 6px;
+					}​
+					</style>
+			</div>
+			<div class="col-sm-3" style="background-color:#ffffcc; margin-left:5em; height:42px; border:solid; border-width:2px; margin-top:6px;">		
+				<h2 style="text-align:center; margin-top:7px; color:red; font-family: Open Sans, Arial, sans-serif; font-size:20px; justify-content:center; display:flex;"><b>KATEN KYOKOTSU</b></h2>
+				<div id="q">
+				<form style="margin-left:0em; margin-top:4em;"><!--action="select_item_quantity"-->
+					<label for="quantity">Quantity: <input type="number" id="quantity" name="quantity" min="1" max="2" autofocus></label>
+				</form>
+				</div>
+			</div>
+			<div class="col-sm-1">
+				<img id="vl" src="img/vertical_line.png">
+					<style>
+					#vl {
+						display: block;
+						max-width: 3px;
+						max-height: 150px;
+						margin-left: 70px;
+						margin-top: 20px;
+					}​
+					</style>
+			</div>
+			<div class="col-sm-3">
+				<h2 style="text-align:center; font-family: Open Sans, Arial, sans-serif; font-size:2em; justify-content:center; display:flex; margin-left:4em; margin-top:60px;"><b>(¥100.000)</b></h2>
+			</div>
+		</div>
+		<form action="https://zanpakutostore.pay.ss">
+		<!--Check for TOS agreement before submitting the order-->
+		<script>
+		$(document).ready(function() {
+			var the_terms = $("#TOS");
+			the_terms.click(function() {
+				if ($(this).is(":checked")) {
+					$("#pay").removeAttr("disabled");
+				} else {
+					$("#pay").attr("disabled", "disabled");
+				}
+			});
+		});
+		</script>
+		<div class="row" id="orderinfo" style="margin-top:20px;">
+			<div class="col-sm-5" style="margin-left:4em;">
+				<h5 style="color:#a300cc;"><b>Enter your personal info</b></h5>
+				<input type="text" id="name" name="name" placeholder="Your name here..." style="width:20em; height:25px; margin-bottom:5px; border-radius:4px;" required>
+				<input type="text" id="surn" name="surn" placeholder="Your surname here..." style="width:20em; height:25px; margin-bottom:5px; border-radius:4px;" required>
+				<input type="email" id="email" name="email" placeholder="Your email here..." style="width:20em; height:25px; margin-bottom:5px; border-radius:4px;" required>
+				<input type="tel" id="phone" name="phone" maxlength="10" placeholder="Your phone number here..." onkeypress="phoneval(event)" style="width:20em; height:25px; margin-bottom:5px; border-radius:4px;" required>
+					<script>
+					function phoneval(evt) {
+						var theEvent = evt || window.event;
+						<!-- Handle paste -->
+						if (theEvent.type === 'paste') {
+							key = event.clipboardData.getData('text/plain');
+						} else {
+						<!-- Handle key press -->
+							var key = theEvent.keyCode || theEvent.which;
+							key = String.fromCharCode(key);
+						}
+						var regex = /[0-9]|\./;
+						if( !regex.test(key) ) {
+							theEvent.returnValue = false;
+							if(theEvent.preventDefault) theEvent.preventDefault();
+						}
+					}
+					</script>
+				<input type="text" id="addr" name="addr" placeholder="Your street address here..." style="width:20em; height:25px; margin-bottom:5px; border-radius:4px;" required>
+				<input type="number" id="floor" name="floor" min="0" placeholder="Your floor here..." style="width:20em; height:25px; margin-bottom:5px; border-radius:4px;" required>
+				<input type="text" id="zipc" name="zipc" maxlength="5" placeholder="Your zip/postal code here..." onkeypress="zipval(event)" style="width:20em; height:25px; margin-bottom:5px; border-radius:4px;" required>
+					<script>
+					function zipval(evt) {
+						var theEvent = evt || window.event;
+						<!-- Handle paste -->
+						if (theEvent.type === 'paste') {
+							key = event.clipboardData.getData('text/plain');
+						} else {
+						<!-- Handle key press -->
+							var key = theEvent.keyCode || theEvent.which;
+							key = String.fromCharCode(key);
+						}
+						var regex = /[0-9]|\./;
+						if( !regex.test(key) ) {
+							theEvent.returnValue = false;
+							if(theEvent.preventDefault) theEvent.preventDefault();
+						}
+					}
+					</script>
+				<input type="text" id="city" name="city" placeholder="Your city here..." style="width:20em; height:25px; margin-bottom:5px; border-radius:4px;" required>
+				<div>
+					<select id="perifereia" name="perifereia" style="border-radius:4px; width:15em;" required>
+						<option value="select" disabled selected>Select your region</option>
+						<option value="emt">Eastern Macedonia & Thrace</option>
+						<option value="cm">Central Macedonia</option>
+						<option value="wm">Western Macedonia</option>
+						<option value="ep">Epirus</option>
+						<option value="th">Thessaly</option>
+						<option value="ii">Ionian Islands</option>
+						<option value="wg">Western Greece</option>
+						<option value="cg">Central Greece</option>
+						<option value="at">Attica</option>
+						<option value="pl">Peloponnese</option>
+						<option value="na">North Aegean</option>
+						<option value="sa">South Aegean</option>
+						<option value="cr">Crete</option>
+						<!--Info provided by Wikipedia, the Free Encyclopedia (https://el.wikipedia.org/wiki/%CE%A0%CE%B5%CF%81%CE%B9%CF%86%CE%AD%CF%81%CE%B5%CE%B9%CE%B5%CF%82_%CF%84%CE%B7%CF%82_%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1%CF%82) -->
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-5" style="margin-left:2em;">
+				<div id="shipping" style="height:4em; margin-left:4em;">
+					<h5 style="color:#a300cc;"><b>Shipping options</b></h5>
+					<input type="radio" id="hpp" name="shipping" value="hpp" checked="checked">
+					<label for="hpp">Send via the Heavenly-Pillar Palanquin</label><br>
+					<input type="radio" id="sc" name="shipping" value="sc">
+					<label for="sc">Send via Shinigami Courier</label><br>
+					<input type="radio" id="d" name="shipping" value="d">
+					<label for="d">Send via the Dangai</label><br>
+					<p style="font-size: 11px;"><i>*All Zanpakuto get shipped straight at your doorstep!</i></p>
+					</p>
+				</div>
+				<div id="payment" style="height:4em; margin-left:4em; margin-top:6em;">
+					<h5 style="color:#a300cc;"><b>Payment options</b></h5>
+					<input type="radio" id="sp" name="payment" value="sp" checked="checked">
+					<label for="sp">Mobile Payment (via your Soul Pager)</label><br>
+					<input type="radio" id="cod" name="payment" value="cod">
+					<label for="cod">Cash on delivery</label><br>
+					<input type="radio" id="ccdc" name="payment" value="ccdc">
+					<label for="ccdc">Credit/Debit Card</label><br>
+					</p>
+				</div>
+			</div>		
+		</div>
+		<div class="row" id="checkpayment" style="margin-bottom:3em;">
+			<div class="col-sm-5" style="margin-top:5px; margin-left:4em;">
+				<input type="checkbox" id="TOS" name="TOS" style="font-size: 14px; font-family: Helvetica Neue,Helvetica,Arial,sans-serif; margin-top:20px;">  I have read and accept the terms of our<br> privacy policy & privacy notice
+			</div>
+			<div class="col-sm-5">
+				<button id="pay" name="pay" type="submit" style="font-family:verdana; background-color:#1affa3; color:black; margin-top:2em; margin-left:14em; border-radius: 7px; width:10em; height:36px;" disabled="disabled"><b> PLACE ORDER</b></button>
+				<br>
+				<!--Modal popup for correct form submission-->
+				<div id="valmodal" class="modal">
+					<div class="modal-content">
+						<div class="modal-body">
+							<p id="invalidform"><b>You have to fill in all the forms.</b></p>
+							<p id="validform"><b>Success! Press the button below to continue!</b></p>
+							<br>
+						</div>
+						<div class="modal-footer">
+							<button id="checkout" class="btn btn-submit" style="background-color:#1affa3; border:solid; border-width:2px;" disabled="disabled"><b>Proceed to Checkout!</b></button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+				<script>
+				var modal = document.getElementById("valmodal");
+				var btn = document.getElementById("pay");
+				$(document).on('click', '#pay', function(e){
+					e.preventDefault();
+					var check = validate();
+					elem = document.getElementById("#close");
+					elem = document.getElementById("#checkout")
+					$('#valmodal').modal('show');
+					if(check){
+						$('#valmodal').modal('show');
+						$("#validform").show();
+						$("#invalidform").hide();
+						elem = document.getElementById("#close");
+						elem = document.getElementById("#checkout");
+						$("#checkout").removeAttr("disabled");
+					}
+					else
+					{
+						$("#validform").hide();
+						$("#invalidform").show();
+					}
+				});
+				function validate(){
+					var isValid = true;
+					if($("#quantity").val() == ''){
+						isValid = false;
+					}
+					if($("#name").val() == ''){
+						isValid = false;
+					}
+					if($("#surn").val() == ''){
+						isValid = false;
+					}
+					if($("#email").val() == ''){
+						isValid = false;
+					}
+					if($("#phone").val() == ''){
+						isValid = false;
+					}
+					if($("#addr").val() == ''){
+						isValid = false;
+					}
+					if($("#floor").val() == ''){
+						isValid = false;
+					}
+					if($("#zipc").val() == ''){
+						isValid = false;
+					}
+					if($("#city").val() == ''){
+						isValid = false;
+					}
+					if($("#perifereia").val() == 'Select your region'){
+						isValid = false;
+					}
+					return isValid;
+				}
+				</script>
+			</div>
+		</div>
+		</form>
+	</div>
+	<br><br><br>
+</div>
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+</html>
